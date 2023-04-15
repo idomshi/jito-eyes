@@ -46,6 +46,12 @@ const main: Main = ({ root }) => {
   const patched = () => {
     state.elo = root.getElementById('outer')
     state.eli = root.getElementById('inner')
+    const recto = state.elo?.getBoundingClientRect()
+    const recti = state.eli?.getBoundingClientRect()
+    if (recto === undefined) return;
+    if (recti === undefined) return;
+    state.left = recto.width / 2 - recti.width / 2 - state.border
+    state.top =  recto.height / 2 - recti.height / 2 - state.border
   }
 
   return [
