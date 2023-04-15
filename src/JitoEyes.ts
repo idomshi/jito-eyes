@@ -1,15 +1,16 @@
-import { compact, Main } from 'jito'
-import { JitoEye } from './JitoEye';
+import { compact, Main } from "jito";
+import { JitoEye } from "./JitoEye";
 
 const main: Main = () => {
   return [
     {
-      'jito-eye': JitoEye,
+      "jito-eye": JitoEye,
     },
-  ]
-}
+  ];
+};
 
-export const JitoEyes = compact(`
+export const JitoEyes = compact(
+  `
 <style>
 #jitoeyes {
   display: flex;
@@ -20,4 +21,6 @@ export const JitoEyes = compact(`
 <div id="jitoeyes">
   <jito-eye />
   <jito-eye />
-</div>`, main)
+</div>`,
+  main,
+);
