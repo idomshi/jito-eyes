@@ -9,6 +9,6 @@ const main: Main = () => {
 
 const component = compact(`
 <div id="id">
-  <jito-eyes />
+  <jito-eyes style="position: absolute;top: 200px; left: 150px;" />
 </div>`, main)
 mount('#app', component)
